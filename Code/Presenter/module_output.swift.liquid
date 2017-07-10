@@ -8,6 +8,9 @@
 
 import ViperMcFlurry
 
-protocol {{ module_info.name }}ModuleInput: class, RamblerViperModuleInput  {
-    func configure()
+protocol {{ module_info.name }}ModuleOutput: class {
+    ///
+    func cancel{{ module_info.name }}(module: RamblerViperModuleTransitionHandlerProtocol)
+
+    func complete{{ module_info.name }}(module: RamblerViperModuleTransitionHandlerProtocol)
 }
