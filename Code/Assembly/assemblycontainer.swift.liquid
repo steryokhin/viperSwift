@@ -38,6 +38,7 @@ class {{ module_info.name }}AssemblyContainer: Assembly {
 
 		container.storyboardInitCompleted({{ module_info.name }}ViewController.self) { r, viewController in
 			viewController.output = r.resolve({{ module_info.name }}Presenter.self, argument: viewController)
+			viewController.moduleInput = r.resolve({{ module_info.name }}Presenter.self, argument: viewController)
 		}
 	}
 
